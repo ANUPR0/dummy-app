@@ -3,18 +3,4 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
-permissions:
-  - object: /var/www/html
-    pattern: "**"
-    owner: ec2-user
- group: apache
-    mode: 755
-hooks:
-  BeforeInstall:
-    - location: scripts/before-install.sh
-  AfterInstall:
-    - location: scripts/after-install.sh
-  ApplicationStart:
-    - location: scripts/application-start.sh
-  ValidateService:
-    - location: scripts/validate-service.sh
+
